@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rainwater Harvesting Questionnaire</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="kssg_basicstyles.css">
+        <script src="kssgh_basicscript.js"></script>
+    </head>
+    <body>
+        <table>
+            
+            <tr>
+                <th>
+                    <img class="fit-picture"
+                    src="http://www.delhijalboard.nic.in/sites/default/files/RWH3.jpg"
+                    alt="RwHimage1.jpg">
+                </th>
+                <th colspan="4">                    
+                    <span class="set_banner">Rainwater<br>Harvesting<br>Questionnaire</span>
+                </th>
+                <th>
+                    <img class="fit-picture"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPbj_GpCXGQUkNG-mvLD_SolroSauXDFfroOfOuPMcC4P6WqH6MA&s"
+                    alt="RwHimage2.jpg">
+                </th>
+            </tr>
+            <!--INPUT 1-->
+            <tr>
+                <td>
+                    <span id="field1" class="questions">*Given Name :</span>
+                </td>
+                <td colspan="4">
+                    <input id="input1" type="text" name="givenname"
+                    minlength="1" maxlength="100" size="75"
+                    placeholder="Given Name as on Passport"
+                    onblur="checkName()" autofocus required>
+                </td>
+                <td>
+                    <span id="valid_msg1"></span>
+                </td>
+            </tr>
+            <!--INPUT 2-->
+            <tr>
+                <td>
+                    <span id="field2" class="questions">Last Name:</span>
+                </td>
+                <td colspan="4">
+                    <input id="input2" name="givenname" type="text"
+                    minlength="1" maxlength="100" size="75"
+                    placeholder="Last Name as on Passport"
+                    onblur="checklastname()">
+                </td>
+                <td>
+                    <span id="valid_msg2"></span>
+                </td>
+            </tr>
+            <!--INPUT 3-->
+            <tr>
+                <td>
+                    <span id="field3" class="questions">*Phone Number :</span>
+                </td>
+                <td colspan="4"><span>+91-</span>
+                    <input id="input3" name="phonenumber" type="number"
+                    onblur="checkphno()"
+                    placeholder="10 digit Mobile number" required>
+                </td>
+                <td>
+                    <span id="valid_msg3"></span>
+                </td>
+            </tr>
+            <!--INPUT 4-->
+            <tr>
+                <td>
+                    <span id="field4" class="questions">Date of birth</span>
+                </td>
+                <td><input id="input4" type="date" 
+                    min="1919-01-01" max="2019-12-31" 
+                    onblur="checkdate()" required></td>
+                <td>
+                    <span id="valid_msg4"></span>
+                </td>
+            </tr>
+            <!--INPUT 5-->
+            <tr>
+                <td>
+                    <span id="field5" class="questions">Email address</span>
+                </td>
+                <td colspan="4">
+                    <input id="input5" name="email" type="email"
+                    minlength="5" maxlength="200" size="75"
+                    onblur="checkemail()"
+                    placeholder="Enter a valid email address (25 to 200 characters)" required><br>
+                </td>
+                <td>
+                    <span id="valid_msg5"></span>
+                </td>
+            </tr>
+            <!--INPUT 6-->
+            <tr>
+                <td>
+                    <span id="field6" class="questions">Residential Address</span>
+                </td>
+                <td colspan="4">
+                    <input id="input6" name="email" type="email"
+                    maxlength="230" size="75"
+                    onblur="checkaddress()"
+                    placeholder="Enter address of your residence (max 230 characters)" required><br>
+                </td>
+                <td>
+                    <span id="valid_msg6"></span>
+                </td>
+            </tr>
+            <!--INPUT 7-->
+            <tr>
+                <td>
+                    <span id="field7" class="questions">Preferred time and method of contact (MOC)</span>
+                </td>
+                <td>
+                    <input id="input71" type="radio" name="pt" value="morning"><label>morning</label>
+                    <input id="input72" type="radio" name="pt" value="afternoon"><label>afternoon</label>
+                    <input id="input73" type="radio" name="pt" value="enabling"><label>Evening</label>
+                    <br>
+                    <input id="input74" type="radio" name="moc" value="on-site" ><label>On-site</label>
+                    <input id="input75" type="radio" name="moc" value="phone"><label>Phone</label>
+                    <input id="input76" type="radio" name="moc" value="email"><label>Email</label>
+                </td>
+                <td>
+                    <span id="valid_msg7"></span>
+                </td>
+            </tr>
+            <!--INPUT 8-->
+            <tr>
+                <td id="field8" class="questions">Are you the owner of the proposed installation site ?</td>
+                <td>
+                    <input id="input81" type="radio" id="input81" name="ownership" value="Yes"><label>Yes</label>
+                    <input id="input82" type="radio" id="input82" name="ownership" value="No"><label>No</label>
+                </td>
+                <td>
+                    <span id="valid_msg8"></span>
+                </td>
+            </tr>
+            <!--INPUT 9-->
+            <tr>
+                <td id="field9" class="questions">What are your intended uses for the collected water ?</td>
+                <td>
+                    <input type="checkbox" id="input91" name="purpose" value="drinking"><label>Drinking and other potable uses</label>
+                    <input type="checkbox" id="input92" name="purpose" value="pets"><label>Drinking source for pets, livestock or wildlife</label>
+                    <input type="checkbox" id="input93" name="purpose" value="toilet"><label>Toilet flushing</label>
+                    <input type="checkbox" id="input94" name="purpose" value="laundry"><label>Clothes washing</label><br>
+                    <input type="checkbox" id="input95" name="purpose" value="carwash"><label>Car washing</label>
+                    <input type="checkbox" id="input96" name="purpose" value="gardening"><label>Garden irrigation-ornamental</label>
+                    <input type="checkbox" id="input97" name="purpose" value="kitchengardening"><label>Garden irrigation-edible</label>
+                    <input type="checkbox" id="input98" name="purpose" value="other"><label>Other</label>
+                    <input type="text" id="input99" name="" size="75" maxlength="100"
+                    placeholder="(Please Specify if you have any other intended use of water)"> 
+                </td>
+                <td>
+                    <span id="valid_msg9"></span>
+                </td>
+            </tr>
+            <!--INPUT 10-->
+            <tr>
+                <td id="field10" class="questions">Approx how much (i.e. in Sq ft.) landscape area are you hoping to irrigate ?</td>
+                <td>
+                    <input id="input101" type="number" size="50">
+                </td>
+                <td>
+                    <span id="valid_msg10"></span>
+                </td>
+            </tr>
+            <!--INPUT 11-->
+            <tr>
+                <td id="field11" class="questions">Is the propoerty located within a city limit ?</td>
+                <td>
+                    <input type="radio" id="input111" name="locality" value="Yes"><label>Yes</label>
+                    <input type="radio" id="input112" name="locality" value="No"><label>No</label>
+                </td>
+                <td>
+                    <span id="valid_msg11"></span>
+                </td>
+            </tr>
+            <!--INPUT 12-->
+            <tr>
+                <td id="field12" class="questions">
+                    What material is your roof surfaced with ?
+                </td>
+                <td>
+                    <input type="checkbox" id="input121" name="material" value="asphalt"><label>Asphalt Shingle</label>
+                    <input type="checkbox" id="input122" name="material" value="tiles"><label>Tile Shingle</label>
+                    <input type="checkbox" id="input123" name="material" value="wooded"><label>Wood Shingle</label>
+                    <input type="checkbox" id="input124" name="material" value="metallic"><label>Corrugated Metal</label>
+                    <input type="checkbox" id="input125" name="material" value="ecofriendly"><label>Green Roof</label>
+                    <input type="checkbox" id="input126" name="material" value="mixed"><label>Mixed Surface</label>
+                    <input type="checkbox" id="input127" name="material" value="other"><label>Other</label>
+                </td>
+                <td>
+                    <span id="valid_msg12"></span>
+                </td>
+            </tr>
+            <!--INPUT 13-->
+            <tr>
+                <td id="field13" class="questions">was your roof resurfeced within the last 3 years ?</td>
+                <td>
+                    <input type="radio" id="input131" name="resurfacing" value="Yes"><label>Yes</label>
+                    <input type="radio" id="input132" name="resurfacing" value="No"><label>No</label>
+                </td>
+                <td>
+                    <span id="valid_msg13"></span>
+                </td>
+            </tr>
+            <!--INPUT 14-->
+            <tr>
+                <td id="field14" class="questions">what are your gutters and downspouts made of ?</td>
+                <td>
+                    <input type="radio" id="input141" name="drainage" value="metal"><label>Metal</label>
+                    <input type="radio" id="input142" name="drainage" value="plastic"><label>Plastic</label>
+                    <input type="radio" id="input143" name="drainage" value="other"><label>Other</label>
+                    <input type="radio" id="input144" name="drainage" value="notapplicable"><label>I don't have any gutters</label>
+                </td>
+                <td>
+                    <span id="valid_msg14"></span>
+                </td>
+            </tr>
+            <!--INPUT 15-->
+            <tr>
+                <td id="field15" class="questions">are there any zinc, lead, copper, or galvanized materials
+                     as part of your roof or gutter/downspout system ?</td>
+                <td>
+                    <input type="radio" id="input151" name="coating" value="Yes"><label>Yes</label>
+                    <input type="radio" id="input152" name="coating" value="No"><label>No</label>
+                </td>
+                <td>
+                    <span id="valid_msg15"></span>
+                </td>
+            </tr>
+            <!--INPUT 16-->
+            <tr>
+                <td id="field16" class="questions">what do you feel realistic project budget ?</td>
+                <td>
+                    <input type="radio" id="input161" name="budget" value="usd5000-10000"><label>$ 5000-10000</label>
+                    <input type="radio" id="input162" name="budget" value="usd10000-15000"><label>$ 10000-15000</label>
+                    <input type="radio" id="input163" name="budget" value="usd15000-20000"><label>$ 15000-20000</label>
+                    <input type="radio" id="input164" name="budget" value="usd20000-30000"><label>$ 20000-30000</label>
+                    <input type="radio" id="input165" name="budget" value="above$30000"><label>$ 30000 and above</label>
+                </td>
+                <td>
+                    <span id="valid_msg16"></span>
+                </td>
+            </tr>
+            <!--INPUT 17-->
+            <tr>
+                <td id="field17" class="questions">How did you hear about rainwater harvesting ?</td>
+                <td>
+                    <input type="text" id="input171" size="75" maxlength="200"
+                    placeholder="Please explain how did you hear about rainwater harvesing (in 200 characters)">
+                </td>
+                <td>
+                    <span id="valid_msg17"></span>
+                </td>
+            </tr>
+            <!--INPUT 18-->
+            <tr>
+                <td id="field18" class="questions">Please attach any images or drawings that you feel would be helpful</td>
+                <td>
+                    <input type="file" id="input181" name="waterharvesting" accept="image/png, image/jpeg, image/jpg">
+                </td>
+                <td>
+                    <span id="valid_msg18"></span>
+                </td>
+            </tr>
+        </table>
+        <br><hr><br>
+        <button id="submit" type="submit" value="submit" onclick="myPrompt()">
+            <span class="submit_text">Submit</span>
+        </button>
+        <h1 id="output"></h1>
+    </body>
+</html>

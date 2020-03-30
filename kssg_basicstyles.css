@@ -1,0 +1,47 @@
+.label{
+    text-align: left;
+}
+.questions{
+    font-weight: bolder;
+}
+.fit-picture{
+    width: 150px;
+    text-align: right;
+}
+.set_banner{
+    color: #3498DB;
+}
+/*==================================================*/
+input{
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    padding: 5px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+/*==================================================*/
+button{
+    padding: 0 190px;
+    height: 60px;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+    border: solid 1px #000000;
+}
+th{
+    font-size: 55px;
+    text-align: justify;
+    border-bottom: solid 2px #3498DB;
+    padding: 10px;
+}
+#submit{
+    font-size: 20px;
+    font-weight: bolder;
+    color: navy;
+}
