@@ -1,4 +1,4 @@
-# GUI4WaterManagement1
+# WaterHarvesingQuestionnaire
 ## "Rainwater Harvesting Questionnaire" is an attempt to develop GUI using HTML-CSS-Javascript tools to collect user data for water harvesting and management purposes.
 <img src='https://github.com/gk100/GUI4WaterManagement1/blob/master/GUI_screenshot.PNG'>
 
